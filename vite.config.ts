@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/dam-todo-3/',
   plugins: [react()],
+  test: {
+    environment: 'node',
+  },
 })
