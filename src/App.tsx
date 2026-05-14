@@ -17,7 +17,11 @@ function App() {
     <main>
       <h1>Todo</h1>
       <TodoInput onAdd={(title) => dispatch({ type: 'add', title })} />
-      <TodoList todos={todos} />
+      <TodoList
+        todos={todos}
+        onToggle={(id) => dispatch({ type: 'toggle', id })}
+        onDelete={(id) => dispatch({ type: 'delete', id })}
+      />
     </main>
   );
 }
