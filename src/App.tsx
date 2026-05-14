@@ -21,6 +21,7 @@ function App() {
         todos={todos}
         onToggle={(id) => dispatch({ type: 'toggle', id })}
         onDelete={(id) => dispatch({ type: 'delete', id })}
+        onEdit={(id, title) => dispatch({ type: 'edit', id, title })}
       />
     </main>
   );
