@@ -5,13 +5,14 @@ interface Props {
   todos: Todo[];
   onToggle: (id: string) => void;
   onDelete: (id: string) => void;
+  onEdit: (id: string, title: string) => void;
 }
 
-export function TodoList({ todos, onToggle, onDelete }: Props) {
+export function TodoList({ todos, onToggle, onDelete, onEdit }: Props) {
   return (
     <ul>
       {todos.map((todo) => (
-        <TodoItem key={todo.id} todo={todo} onToggle={onToggle} onDelete={onDelete} />
+        <TodoItem key={todo.id} todo={todo} onToggle={onToggle} onDelete={onDelete} onEdit={onEdit} />
       ))}
     </ul>
   );
